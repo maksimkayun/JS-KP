@@ -40,6 +40,12 @@ function getContent(content) {
 function getButton(type) {
     const $btn = document.createElement('button');
     $btn.textContent = type;
+    if (type === 'Удалить') {
+        $btn.id = 'delete';
+    } 
+    else {
+        $btn.id = 'archive';
+    }
     return $btn;
 }
 
