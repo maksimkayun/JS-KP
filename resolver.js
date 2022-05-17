@@ -71,12 +71,19 @@ function addItem(author, title, category, content) {
 
     $elem.append($div);
     forArchive();
+    forDelete();
 }
 
 function forArchive() {
     let buttons = document.querySelectorAll('button[id=archive]');
     buttons.forEach(e=> {
         e.addEventListener('click', clickButtonArchive);
+    });
+}
+function forDelete() {
+    let buttons = document.querySelectorAll('button[id=delete]');
+    buttons.forEach(e=> {
+        e.addEventListener('click', clickButtonDelete);
     });
 }
 
@@ -96,6 +103,14 @@ function clickButtonArchive(e) {
 
     const $elementrm = document.getElementById(id);
     $elementrm.remove();
+}
 
-    forDelete();
+function clickButtonDelete(e) {
+    let target = e.currentTarget;
+    let parent = target.parentNode;
+    
+    let id = parent.id;
+    
+    const $elementrm = document.getElementById(id);
+    $elementrm.remove();
 }
