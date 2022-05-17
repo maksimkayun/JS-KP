@@ -1,4 +1,5 @@
 let i = 0;
+let j = 0;
 
 function addItemOnClick() {
     // TODO!
@@ -27,7 +28,6 @@ function getAuthorOrCategory(nameOf, type) {
         $author.append(document.createElement('span'));        
     }    
     $author.firstElementChild.textContent = nameOf;
-    $author.firstElementChild.style = 'bold';
     return $author;
 }
 
@@ -53,8 +53,6 @@ function addItem(author, title, category, content) {
     const $elem = document.getElementsByClassName('articleclass')[0]
     const $div = document.createElement('div');
     $div.id = `div${i++}`;
-
-    $div.style = '' // TODO 
     $div.className = 'customstate'
 
     const $title = getTitle(title);
@@ -72,4 +70,32 @@ function addItem(author, title, category, content) {
     $div.append($buttonArch);
 
     $elem.append($div);
+    forArchive();
+}
+
+function forArchive() {
+    let buttons = document.querySelectorAll('button[id=archive]');
+    buttons.forEach(e=> {
+        e.addEventListener('click', clickButtonArchive);
+    });
+}
+
+function clickButtonArchive(e) {
+    let target = e.currentTarget;
+    let parent = target.parentNode;
+    
+    let id = parent.id;
+
+    const $elem = document.getElementsByClassName('archiveclass')[0]
+    const $li = document.createElement('li');
+    $li.id = `li${j++}`;
+    $li.className = 'customli'
+
+    $li.innerText = document.getElementById(id).firstElementChild.textContent;
+    $elem.append($li);
+
+    const $elementrm = document.getElementById(id);
+    $elementrm.remove();
+
+    forDelete();
 }
