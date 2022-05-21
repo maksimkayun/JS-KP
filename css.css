@@ -185,3 +185,10 @@ body{
     overflow-y: visible;
     width: 100%;
 }
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 4px solid #40493b;
+  }
