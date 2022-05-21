@@ -33,6 +33,7 @@ function getAuthorOrCategory(nameOf, type) {
 
 function getContent(content) {
     const $content = document.createElement('p');
+    $content.className = 'description';
     $content.textContent = content;
     return $content;
 }
