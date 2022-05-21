@@ -1,19 +1,16 @@
 body{
-    display:block;
-    margin: 0;
-    padding: 0;
-    /* flex-wrap: wrap; */
-}
-.Title {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    /* width: 100vw; */
     display: flex;
-    background: #006b09;
-    border-bottom: 4px solid #07b148;
-    padding: 10px 20px 0px;
-    font-size: 36px;
-    color: #fff;
-    font-weight: 700;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+.Title{
+    width: 100%;
+    color: white;
+    background-color: #006b09;
+    border-bottom: 0.5vh solid #07b148;
 }
 
 .Title h1{
@@ -22,21 +19,16 @@ body{
     font-style: bold;
     margin: 1vh 0vw 0vw 1.5vh;
 }
-.body-side {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 20px;
-}
+
 .MainContent{
-    display:inline-block;
-    width: 70%;
+    display: inline-block;
+    width: 69%;
     min-height: 80vh;
     border: 0.5vh dashed #356949;
     border-bottom-color:- #07b148 ;
     border-radius: 1rem;
 
-    margin: 1vw;
+    margin: 1vw 0vw 1vw 0.5vw;
 
     box-shadow: 0.5em 1em 0.5em 0em rgba(64, 73, 59, 0.281);
     overflow-y: visible;
@@ -51,12 +43,8 @@ body{
     border: 0.5vh dashed #356949;
     border-bottom-color:- #07b148;
     border-radius: 1rem;
-    padding-bottom: 1vh;
 
-    margin-right: 0.5vw;
-    margin-bottom: 1vw;
-    margin-left: 0.5vw;
-    overflow-y: visible;
+    margin: 1vw 0.5vw 1vw 0.5vw;
     box-shadow: 0.5em 1em 0.5em 0em rgba(64, 73, 59, 0.281);
 }
 
@@ -80,7 +68,7 @@ body{
     border-bottom: 0.25vh solid black;
     background-color: transparent;
 
-     margin: 0vh 1vw 2vh 1vw;
+    margin: 0vh 1vw 2vh 1vw;
 }
 .Form label{
     margin-left: 1vw;
@@ -89,13 +77,8 @@ body{
 }
 
 #content{
-    margin: 0vh 1vw 2vh 1vw; 
     width: 90%;
-    visibility: inherit;
-}
-
-.articleclass {
-    width: 100%;
+    margin: 0vh 1vw 2vh 1vw; 
 }
 
 #createBtn{
@@ -140,10 +123,9 @@ body{
 }
 
 .customstate{
-    display: inline-block;
     width: 95%;
     height: auto;
-    
+
     margin: 2vh;
 }
 
@@ -188,23 +170,18 @@ body{
 }
 
 .archiveclass{
-    margin: 2vh 1vw 1vh 1vw;
-    width: 5vw;
-    height: 3vh;
+    margin: 2vh 1vw 0vh 1vw;
 }
+
 
 .archiveclass .customli{
     font-family: "PT sans", sans-serif;
     font-size: 1rem;
+    width: 95%;
 }
 
 .Archive{
     display: inline-block;
     overflow-y: visible;
-}
-
-.customstate .description {
-    display: inline-block;
-    min-height: 2.5vh;
     width: 100%;
 }
