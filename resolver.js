@@ -1,6 +1,3 @@
-let i = 0;
-let j = 0;
-
 function addItemOnClick() {
     // TODO!
     let title = document.getElementById('title_article').value;
@@ -46,8 +43,6 @@ function forDelete() {
 function clickButtonArchive(e) {
     let target = e.currentTarget;
     let parent = target.parentNode;
-    
-    let id = parent.id;
 
     const $elem = document.getElementsByClassName('archive_form_class')[0]
     const $li = document.createElement('li');
