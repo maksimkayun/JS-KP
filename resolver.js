@@ -12,9 +12,10 @@ function addItemOnClick() {
 }
 
 function addItem(author, title, category, content) {
-    const $elem = document.getElementsByClassName('articleclass')[0]
+    const $elemarticle = document.getElementsByClassName('articleclass')[0]
     const $div = document.createElement('div');
-    $div.innerHTML = `<div id="div${i++}" class="record">
+    $div.className = 'record'
+    $div.innerHTML = `
     <h1>${title}</h1>
     <p>Автор:<span>${author}</span></p>
     <p>Категоия:<span>${category}</span></p>
@@ -24,7 +25,7 @@ function addItem(author, title, category, content) {
     <button id="delete">Удалить</button>
     <button id="archive">Архив</button>`;
 
-    $elem.append($div);
+    $elemarticle.append($div);
     forArchive();
     forDelete();
 }
@@ -50,22 +51,16 @@ function clickButtonArchive(e) {
 
     const $elem = document.getElementsByClassName('archive_form_class')[0]
     const $li = document.createElement('li');
-    $li.id = `li${j++}`;
     $li.className = 'customli'
 
-    $li.innerText = document.getElementById(id).firstElementChild.textContent;
-    $elem.append($li);
+    $li.innerText = parent.children[0].innerText
+    $elem.appendChild($li);
 
-    const $elementrm = document.getElementById(id);
-    $elementrm.remove();
+    let list = document.getElementsByClassName('articleclass')[0];
+    list.removeChild(e.currentTarget.parentNode);
 }
 
 function clickButtonDelete(e) {
-    let target = e.currentTarget;
-    let parent = target.parentNode;
-    
-    let id = parent.id;
-    
-    const $elementrm = document.getElementById(id);
-    $elementrm.remove();
+    let list = document.getElementsByClassName('articleclass')[0];
+    list.removeChild(e.currentTarget.parentNode);
 }
