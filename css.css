@@ -1,5 +1,4 @@
 body{
-    /* width: 100vw; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -20,7 +19,7 @@ body{
     margin: 1vh 0vw 0vw 1.5vh;
 }
 
-.MainContent{
+.Main{
     display: inline-block;
     width: 69%;
     min-height: 80vh;
@@ -36,7 +35,7 @@ body{
 }
 
 
-.AsideContent {
+.Aside {
     display: inline-block;
     width: 25%;
     min-height: 80vh;
@@ -48,7 +47,7 @@ body{
     box-shadow: 0.5em 1em 0.5em 0em rgba(64, 73, 59, 0.281);
 }
 
-.MainContent h2, .AsideContent h2{
+.Main h2, .Aside h2{
     font-family: "PT sans", sans-serif;
     font-size: 1.5rem;
 
@@ -68,7 +67,7 @@ body{
     border-bottom: 0.25vh solid black;
     background-color: transparent;
 
-    margin: 0vh 1vw 2vh 1vw;
+    margin: 1vh 1vw 1vh 1vw;
 }
 .Form label{
     margin-left: 1vw;
@@ -81,6 +80,7 @@ body{
     margin: 0vh 1vw 2vh 1vw; 
 }
 
+/* Создание - кнопка */
 #createBtn{
     font-family: "PT sans", sans-serif;
     font-size: 1.2rem;
@@ -97,23 +97,6 @@ body{
     border-radius: 0.5rem;
 }
 
-#createBtn:hover{
-    font-family: "PT sans", sans-serif;
-    font-size: 1.2rem;
-
-    width: 25%;
-    height: 4vh;
-
-    margin: 1vh 2vw 0vh 1vw;
-
-
-    color: white;
-    background-color: #07b148;
-
-    border: none;
-    border-radius: 0.5rem;
-}
-
 .Archive h2{
     font-family: "PT sans", sans-serif;
     font-size: 1.5rem;
@@ -122,14 +105,14 @@ body{
     margin: 1.5vw 0.5vw 1vw 0.5vw;
 }
 
-.customstate{
+.record{
     width: 95%;
     height: auto;
 
     margin: 2vh;
 }
 
-.customstate h1{
+.record h1{
     font-family: "PT sans", sans-serif;
     font-size: 1.5rem;
     font-style: bold;
@@ -137,18 +120,18 @@ body{
     margin-bottom: 2vh;
 }
 
-.customstate p{
+.record p{
     font-family: "PT sans", sans-serif;
     font-size: 1rem;
 }
-.customstate p span{
+.record p span{
     font-family: "PT sans", sans-serif;
     font-size: 1rem;
     font-weight: bold;
 }
-.customstate button{
+.record button{
     display: inline;
-    width: 5vw;
+    width: 4vw;
     height: 4vh;
     font-family: "PT sans", sans-serif;
     font-size: 1rem;
@@ -158,23 +141,26 @@ body{
     border-radius: 0.5rem;
 
 }
-.customstate #delete{
+
+/* Кнопки */
+.record #delete{
     position: relative;
     background-color: #cf3a15;
     right: -55vw;
 }
-.customstate #archive{
+.record #archive{
     position: relative;
     background-color: #A3AE9E;
     right: -56vw;
 }
 
-.archiveclass{
-    margin: 2vh 1vw 0vh 1vw;
+/* Архив - форма */
+.archive_form_class{
+    margin: 2vh 1vw 1vh 1vw;
 }
 
 
-.archiveclass .customli{
+.archive_form_class .customli{
     font-family: "PT sans", sans-serif;
     font-size: 1rem;
     width: 95%;
@@ -190,5 +176,5 @@ body{
     width: 100%;
     margin-top: 50px;
     padding: 20px;
-    border-top: 4px solid #40493b;
-  }
+    border-top: 3px solid #3f473b;
+}
